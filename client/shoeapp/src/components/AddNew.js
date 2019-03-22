@@ -5,7 +5,7 @@ export default class AddNew extends Component {
     state={
         type:'',
         color:'',
-        for:'',
+        gender:'',
         url:'',
         size:[],
         qty:''
@@ -21,7 +21,7 @@ export default class AddNew extends Component {
         const obj = {
             type:this.state.type,
             color:this.state.color,
-            for: this.state.for,
+            gender: this.state.gender,
             url:this.state.url,
             size: this.state.size,
             qty: this.state.qty
@@ -36,7 +36,8 @@ export default class AddNew extends Component {
             })
         this.setState({
             type: '',
-            color: ''
+            color: '',
+            gender:''
         })
     }
   render() {
@@ -65,9 +66,9 @@ export default class AddNew extends Component {
                     <label> Man/woman </label>
                     <input
                         type='text'
-                        value={this.state.for}
+                        value={this.state.gender}
                         onChange={this.handleChange}
-                        name='for'
+                        name='gender'
                         className='title' />
                 </div>
                 <div className='ElementForm'>
